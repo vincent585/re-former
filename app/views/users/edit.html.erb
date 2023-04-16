@@ -1,0 +1,9 @@
+<%= form_with(model: @user, method: :patch) do |form| %>
+    <%= form.label(:username, 'New Username:')%>
+    <%= form.text_field(:username, placeholder: @user.username, autofocus: true) %>
+    <%= form.label(:password, 'New Password:') %>
+    <%= form.password_field(:password, placeholder: 'some password') %>
+    <%= form.label(:email, 'Email:') %>
+    <%= form.email_field(:email, placeholder: @user.email) %>
+    <%= form.submit 'Update user' %>
+<% end %>
